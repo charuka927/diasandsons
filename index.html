@@ -11,9 +11,22 @@
       padding: 0;
     }
 
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('back.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #dff0d8, #e5f5e0);
       color: #2e3d29;
       padding: 30px;
       text-align: center;
@@ -22,22 +35,10 @@
     .container {
       max-width: 600px;
       margin: 0 auto;
-      background-color: #fff;
+      background-color: #ffffffdd; /* slight transparency */
       border-radius: 15px;
       padding: 30px 20px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      animation: fadeIn 1.2s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     .logo {
@@ -70,22 +71,12 @@
       text-decoration: none;
       border-radius: 8px;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
     .links a:hover {
       background-color: #a5d6a7;
       transform: scale(1.03);
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    @media (max-width: 600px) {
-      .title {
-        font-size: 24px;
-      }
-      .links a {
-        font-size: 16px;
-      }
     }
   </style>
 </head>
